@@ -61,7 +61,7 @@ header {
 .header-container-full { width: 100%; display: flex; justify-content: flex-start; padding-left: 0; }
 
 .menu-btn { 
-    /* DEFINIDO PARA A COR: #FFF5EB (via variável --card-bg) */
+    /* AJUSTE: Cor do botão MENU igual aos cards (#FFF5EB) */
     background-color: var(--card-bg); 
     
     width: 50px; height: 40px; 
@@ -126,7 +126,7 @@ header {
 .links-section { padding: 10px 0 30px; }
 .grid-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
 
-/* CONFIGURAÇÃO DOS BOTÕES */
+/* CONFIGURAÇÃO DOS BOTÕES (Cards) */
 .clean-card { 
     /* Fundo do botão: Claro (#FFF5EB) */
     background: #FFF5EB; 
@@ -170,10 +170,17 @@ header {
 .slide-item { width: 200px; height: 200px; flex-shrink: 0; border-radius: var(--radius); overflow: hidden; position: relative; pointer-events: none; box-shadow: var(--shadow); }
 .slide-item img { width: 100%; height: 100%; object-fit: cover; }
 
-/* --- Botões (Gerais / Modal) --- */
+/* --- Botões (Falar com o Favu) --- */
 .btn-primary { 
-    background: var(--accent-orange); 
-    color: #fff; 
+    /* AJUSTE: Fundo Claro (#FFF5EB) igual aos cards */
+    background: var(--card-bg); 
+    
+    /* AJUSTE: Texto Verde Escuro (#1D2814) */
+    color: #1D2814; 
+    
+    /* AJUSTE: Sombra igual aos cards */
+    box-shadow: var(--shadow);
+
     padding: 12px; 
     border-radius: 30px; 
     font-weight: bold; 
@@ -184,7 +191,12 @@ header {
     transition: 0.3s; 
     margin-top: 20px;
 }
-.btn-primary:hover { background: var(--accent-rust); }
+
+.btn-primary:hover { 
+    /* AJUSTE: Efeito hover igual aos cards */
+    transform: translateY(-3px); 
+    filter: brightness(0.95); 
+}
 
 /* --- Footer --- */
 footer { 
@@ -216,7 +228,9 @@ footer {
 .modal.show { display: flex; opacity: 1; }
 
 .modal-content { 
-    background: #fff; 
+    /* AJUSTE: Cor do Popup igual ao fundo do Site (#F4E6CB) */
+    background: var(--bg-color); 
+    
     padding: 0; 
     border-radius: 30px; 
     width: 90%; max-width: 450px; 
@@ -241,18 +255,23 @@ footer {
 .close-btn-icon { font-size: 1.2rem; color: #999; transition: 0.3s; }
 .close-btn-wrapper:hover .close-btn-icon { color: #333; }
 
-/* Corpo com Rolagem */
+/* Corpo com Rolagem (BARRA INVISÍVEL) */
 .modal-body-scroll { 
     padding: 40px 30px; 
     padding-bottom: 50px; 
+    
+    /* Mantém a rolagem funcionando */
     overflow-y: auto; 
     max-height: calc(90vh); 
-    scrollbar-width: thin;
-    scrollbar-color: var(--accent-orange) #f0f0f0;
+    
+    /* AJUSTE: Remove a barra no Firefox */
+    scrollbar-width: none; 
 }
-.modal-body-scroll::-webkit-scrollbar { width: 8px; }
-.modal-body-scroll::-webkit-scrollbar-track { background: #f0f0f0; border-radius: 10px; }
-.modal-body-scroll::-webkit-scrollbar-thumb { background-color: var(--accent-orange); border-radius: 10px; border: 2px solid #f0f0f0; }
+
+/* AJUSTE: Remove a barra no Chrome, Safari e Mobile */
+.modal-body-scroll::-webkit-scrollbar { 
+    display: none; 
+}
 
 .modal-img { max-width: 60%; height: auto; border-radius: 15px; margin: 0 auto 20px; display: block; }
 .modal-text { text-align: center; font-family: 'Cocogoose', sans-serif; }
