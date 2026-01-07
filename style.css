@@ -17,6 +17,7 @@
     --bg-color: #F4E6CB; 
     
     /* COR DE FUNDO DE MENUS E CARDS (Claro) */
+    /* Valor Hex: #FFF5EB */
     --card-bg: #FFF5EB;
     
     --text-dark: #2C2C2C;
@@ -60,7 +61,7 @@ header {
 .header-container-full { width: 100%; display: flex; justify-content: flex-start; padding-left: 0; }
 
 .menu-btn { 
-    /* AJUSTADO: Agora usa a cor do card (Claro) */
+    /* DEFINIDO PARA A COR: #FFF5EB (via variável --card-bg) */
     background-color: var(--card-bg); 
     
     width: 50px; height: 40px; 
