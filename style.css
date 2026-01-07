@@ -60,7 +60,10 @@ header {
 .header-container-full { width: 100%; display: flex; justify-content: flex-start; padding-left: 0; }
 
 .menu-btn { 
-    background-color: var(--bg-color); width: 50px; height: 40px; 
+    /* AJUSTADO: Agora usa a cor do card (Claro) */
+    background-color: var(--card-bg); 
+    
+    width: 50px; height: 40px; 
     border-radius: 0 12px 12px 0; border: none; 
     display: flex; align-items: center; justify-content: center;
     font-size: 1.5rem; 
@@ -288,7 +291,7 @@ footer {
     
     .clean-card { 
         padding: 0.9vh 15px; 
-        gap: 12px;           
+        gap: 12px;            
         border-radius: 12px;
     }
     .clean-card .card-icon { font-size: 1.4rem; } 
@@ -315,7 +318,7 @@ footer {
         
         /* Centralização Vertical e Horizontal */
         justify-content: center; 
-        align-items: center;     
+        align-items: center;      
         
         /* Gap ZERO para aproximar as linhas */
         gap: 0; 
